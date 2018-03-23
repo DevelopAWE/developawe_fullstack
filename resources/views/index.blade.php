@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DevelopAWE</title>
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <!--[if lte IE 9]><link rel="stylesheet" href="{{ asset('css/ie9.css') }}" /><![endif]-->
+  <noscript>
+    <link rel="stylesheet" href="{{ asset('css/noscript.css') }}">
+  </noscript>
 </head>
 <body>
   <div id="wrapper">
@@ -106,7 +111,12 @@
   <footer id="footer">
     <p class="copyright">&copy; DevelopAWE 2018</p>
   </footer>
+  </div>
   <!-- BG -->
   <div id="bg"></div>
+  <script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/skel.min.js') }}"></script>
+  <script src="{{ asset('js/util.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
