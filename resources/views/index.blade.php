@@ -33,6 +33,12 @@
     </nav>
   </header>
 
+  @if ($flash = session('message'))
+      <div id="flash-message" class="alert alert-success" role="alert">
+        {{ $flash }}
+      </div>
+  @endif
+
   <!-- Main -->
   <div id="main">
 
@@ -60,23 +66,23 @@
     <!-- Contact -->
     <article id="contact">
       <h2 class="major">Contact</h2>
-      <form method="post" action="#">
+      <form method="post" action="/contact">
+        {{ csrf_field() }}
         <div class="field half first">
           <label for="name">Name</label>
-          <input placeholder="Currently Disabled"
-          disabled type="text" name="name" id="name" />
+          <input placeholder="Name" type="text" name="name" id="name" required />
         </div>
         <div class="field half">
           <label for="email">Email</label>
-          <input placeholder="Currently Disabled" disabled type="text" name="email" id="email" />
+          <input placeholder="Email" type="email" name="email" id="email" required />
         </div>
         <div class="field">
           <label for="message">Message</label>
-          <textarea placeholder="Currently Disabled" disabled name="message" id="message" rows="4"></textarea>
+          <textarea placeholder="Your Message" name="message" id="message" rows="4" required></textarea>
         </div>
         <ul class="actions">
           <li>
-            <input type="submit" value="Send Message" disabled class="special" />
+            <input type="submit" value="Send Message" class="special" />
           </li>
           <li>
             <input disabled type="reset" value="Reset" />

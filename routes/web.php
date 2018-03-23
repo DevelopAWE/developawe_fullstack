@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'DevelopAweController@index')->name('home');
-Route::post('/', 'DevelopAweController@contact');
+Route::post('/contact', 'DevelopAweController@contact');
