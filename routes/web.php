@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'DevelopAweController@index')->name('home');
+Route::post('/', 'DevelopAweController@contact');
